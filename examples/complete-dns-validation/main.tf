@@ -40,3 +40,9 @@ module "acm" {
     Name = local.domain_name
   }
 }
+
+# When using this module and you want a validate cert, you use
+# resource "aws_lb_listener" "front_end" {
+#  # [...]
+#  certificate_arn = "${module.acm.validated_acm_certificate_arn}"
+# }
